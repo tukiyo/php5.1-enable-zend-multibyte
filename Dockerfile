@@ -9,7 +9,7 @@ RUN yum install -y -q $PACKAGES && yum clean all \
 #RUN yumdownloader --source php
 
 #COPY srpm/php-5.1.6-45.el5_11.src.rpm .
-COPY srpm/download.sh
+COPY srpm/download.sh .
 RUN sh download.sh
 
 RUN rpm -ivh php-5.1.6-45.el5_11.src.rpm
